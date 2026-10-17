@@ -7,10 +7,13 @@ export default defineConfig((ctx) => ({
   reviews: {
     high_level_summary: false,
     review_status: false,
+    review_progress: false,
+    commit_status: false,
     request_changes_workflow: false,
     allow_author_approval: !isGated(ctx),
     auto_review: {
-      enabled: true,
+      enabled: false,
+      auto_incremental_review: false,
     },
     pre_merge_checks: {
       docstrings: { mode: "off" },
